@@ -60,7 +60,7 @@ type ResetRequest struct {
 // In case the request was invalid, or couldn't be processed, an error will be sent instead.
 type ResetResponse struct {
 	Status     ResetStatus       `json:"status" validate:"required,resetStatus201"`
-	StatusInfo *types.StatusInfo `json:"statusInfo" validate:"omitempty"`
+	StatusInfo *types.StatusInfo `json:"statusInfo,omitempty" validate:"omitempty"`
 }
 
 // The CSO may trigger the CSMS to request a Charging Station to reset itself or an EVSE.
